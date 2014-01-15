@@ -1,0 +1,4 @@
+GE
+[#<OpenStruct symbol="GE", last_trade_price="27.317">]:2014-01-15 14:36:44 -0500GE
+T
+[#<OpenStruct symbol="T", last_trade_price="33.91">]:2014-01-15 14:37:15 -0500T
