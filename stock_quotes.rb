@@ -13,16 +13,20 @@ require 'pry'
 
 ######################################
 
-# puts "Please enter a stock ticker symbol:"
-stock_symbol = ARGV.first.upcase
 
-price_array = YahooFinance.quotes([stock_symbol], [:last_trade_price]) # => [symbol="AAPL", last_trade_price="557.38"], array of 2 elements
+stock_symbol = ARGV.first
+if stock_symbol.nil?
+		puts "Please enter a stock ticker symbol:"
+		stock_symbol = gets.chomp.upcase
+end
+
+price_array = YahooFinance.quotes([stock_symbol.upcase], [:last_trade_price]) # => [symbol="AAPL", last_trade_price="557.38"], array of 2 elements
 price = price_array[0][:last_trade_price].to_f
 
 puts "The current stock price is:"
 puts price
 
-quote = [stock_symbol, price, Time.now].inspect
+quote = [stock_symbol.upcase, price, Time.now].inspect
 
 prices_file = File.open("quotes.csv", "a+").puts(quote)
 
