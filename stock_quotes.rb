@@ -1,7 +1,7 @@
 require 'yahoo_finance'
 require 'pry'
 
-fname = "stock_quotes.txt"
+fname = "quotes.csv"
 somefile = File.open(fname, "a")
 puts "Enter a ticker: "
 quote = gets.chomp
