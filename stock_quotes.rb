@@ -7,3 +7,11 @@ ticker = gets.chomp.upcase
 
 data = YahooFinance.quotes([ticker], [:last_trade_price])
 puts data[0].last_trade_price
+
+
+file = File.open('history.txt', 'a')
+file.puts "#{ticker}, #{data[0].last_trade_price}"
+
+
+
+file.close
