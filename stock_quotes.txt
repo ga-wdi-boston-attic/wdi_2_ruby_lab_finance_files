@@ -2,3 +2,13 @@ GE
 [#<OpenStruct symbol="GE", last_trade_price="27.317">]:2014-01-15 14:36:44 -0500GE
 T
 [#<OpenStruct symbol="T", last_trade_price="33.91">]:2014-01-15 14:37:15 -0500T
+AAPL
+[#<OpenStruct symbol="AAPL", last_trade_price="557.36">]:2014-01-15 17:19:59 -0500AAPL
+GE
+GE
+[#<OpenStruct symbol="GE", last_trade_price="27.34">]:2014-01-15 17:22:28 -0500
+YHOO
+[#<OpenStruct symbol="YHOO", last_trade_price="41.07">]:2014-01-15 17:23:05 -0500
+P
+brc
+[#<OpenStruct symbol="brc", last_trade_price="31.45">]:2014-01-15 17:46:08 -0500

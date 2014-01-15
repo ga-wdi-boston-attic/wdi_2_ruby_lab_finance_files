@@ -8,7 +8,8 @@ quote = gets.chomp
 somefile.puts quote
 data = YahooFinance.quotes([quote], [:last_trade_price])
 time_str = Time.now.to_s
-somefile.puts "#{data}:#{time_str}" + quote
+somefile.puts "#{data}:#{time_str}"
+puts "#{data}:#{time_str}"
 somefile.close
 
 # puts "ge is " << YahooFinance.quotes(['GE'], [:last_trade_price]).join(', ')
