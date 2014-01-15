@@ -1,12 +1,12 @@
 require 'yahoo_finance'
 require 'pry'
+File.open('quotes.csv', 'a') do |f|
+	ticker = ARGV
 
-ticker = ARGV[0].upcase
+	data = YahooFinance.quotes(ticker, [:last_trade_price])
 
-data = YahooFinance.quotes([ticker], [:last_trade_price])
-puts data[0].last_trade_price
-
-
-file = File.open('quotes.csv', 'a')
-file.puts "#{ticker}, #{data[0].last_trade_price}, #{Time.new}"
-file.close
+	data.each do |symbol|
+		puts "#{symbol.symbol.upcase} is trading at #{symbol.last_trade_price}"
+		f.puts "#{symbol.symbol.upcase}, #{symbol.last_trade_price}, #{Time.new}"
+	end
+end
