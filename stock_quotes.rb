@@ -17,15 +17,17 @@ data = YahooFinance.quotes([stock_ticker_symbol], [:last_trade_price] )
 puts data
 
 data_hash = {}
-
 data_hash = { Time.now.to_s => data }
 
 # Display all prior search results (symbol, price, Time)
-
-File.open("prev_trades_search.txt").readlines.each do |line|
-   puts line
+puts "here is the search history :"
+info =  File.open("prev_trades_search.csv")
+search_array = []
+info.each do |f|
+	search_array << f.strip
 end
 
+puts search_array
 
 # Append the ticker symbol, current price and current Time to the quotes.csv file
 # so that on the next run of the program, this information will be saved.
