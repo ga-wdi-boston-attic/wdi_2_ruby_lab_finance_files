@@ -13,8 +13,8 @@ require 'pry'
 
 ######################################
 
-puts "Please enter a stock ticker symbol:"
-stock_symbol = gets.chomp().upcase
+# puts "Please enter a stock ticker symbol:"
+stock_symbol = ARGV.first.upcase
 
 price_array = YahooFinance.quotes([stock_symbol], [:last_trade_price]) # => [symbol="AAPL", last_trade_price="557.38"], array of 2 elements
 price = price_array[0][:last_trade_price].to_f
