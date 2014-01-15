@@ -6,7 +6,7 @@ Files (like we used earlier today in class), allow us to store data between runs
 
 ## Assignment
 
-* Create a program that will prompt the user for a stock ticker symbol. 
+* Create a program that will prompt the user for a stock ticker symbol.
 * Display the current ticker price for this symbol.
 * Display all prior search results (symbol, price, Time)
 * Append the ticker symbol, current price and current Time to the `quotes.csv` file so that on the next run of the program, this information will be saved.
@@ -17,7 +17,7 @@ Figure out how to use commandline arguments to pass in the stock ticker symbol, 
 
 ## Tips
 
-* Run `bundle install` when you first clone this repo and change into the directory. This will do something special with the Gemfile that we'll talk about more later.
+<!-- * Run `bundle install` when you first clone this repo and change into the directory. This will do something special with the Gemfile that we'll talk about more later. -->
 * Use the Force, I mean `pry` if you get stuck
 * Figure out how to use the Finance gem first, then deal with file i/o
 * You can get the Time with `Time.now`
