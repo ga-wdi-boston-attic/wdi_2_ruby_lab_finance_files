@@ -9,12 +9,10 @@ array.push(gets.chomp)
 data = YahooFinance.quotes(array, [:last_trade_price])
 
 symbol = data[0].symbol
-price = data[0].ask
+price = data[0].last_trade_price
 
 puts "#{symbol} value is: #{price}"
 
-#File.open('quotes.csv', 'a+') { |file| file.write trade_price }
+File.open('quotes.csv', 'a+') { |file| file.write "#{symbol} value is: #{price} at #{Time.now}" }
 
-file = File.open('quotes.csv', 'a+')
-file.puts "#{symbol} value is: #{price} at #{Time.now}"
 
